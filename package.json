@@ -1,10 +1,11 @@
 {
     "name": "chromium-vim",
     "author": "Jake Eaton <1995eaton@gmail.com>",
+    "maintainer": "Zephyr Pellerin <zv@nxvr.org>",
     "description": "Vim bindings for Google Chrome.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/1995eaton/chromium-vim"
+        "url": "https://github.com/zv/chromium-vim"
     },
     "private": true,
     "devDependencies": {
