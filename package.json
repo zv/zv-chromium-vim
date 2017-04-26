@@ -1,15 +1,18 @@
 {
-  "name": "chromium-vim",
-  "author": "Jake Eaton <1995eaton@gmail.com>",
-  "description": "Vim bindings for Google Chrome.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/1995eaton/chromium-vim"
-  },
-  "private": true,
-  "devDependencies": {
-    "highlight.js": "latest",
-    "markdown-it": "latest",
-    "pegjs": "latest"
-  }
+    "name": "chromium-vim",
+    "author": "Jake Eaton <1995eaton@gmail.com>",
+    "description": "Vim bindings for Google Chrome.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/1995eaton/chromium-vim"
+    },
+    "private": true,
+    "devDependencies": {
+        "highlight.js": "latest",
+        "markdown-it": "latest",
+        "pegjs": "latest"
+    },
+    "scripts": {
+        "concat": "./concatenate_script.sh"
+    }
 }
