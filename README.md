@@ -1,6 +1,13 @@
-# What is cVim?
+# How does this differ from mainline [cvim?](https://github.com/1995eaton/chromium-vim?)
 
-Vim for Google Chrome. I hate using the mouse, especially after learning Vim. With my desktop (Linux), I have a lot of key bindings that make doing things easier: I open Chrome with `Alt+w`, I close a window with `Alt+Shift+d`, I open a terminal with `Alt+t`. This is harder to do with Chrome because it has no section for customizing keyboard shortcuts, and it is still necessary to use the mouse to do things like click links. cVim aims to eliminate this problem as best as the Chrome extensions API will allow it to.
+This is a small patchset for Jake Eaton's excellent extension, namely:
+
+1. Disable updates. CVim inserts JavaScript into every page in the form of a "content script". A variety of access control measures exist in Chrome extensions, but unfortunately none of them apply in CVim's case.
+
+2. Consolidated script resources. CVim loades dozens of content scripts which crowd out actual content when debugging web applications.
+
+3. New sensible defaults. In addition to being a keyboard-oriented way to navigate the web, cvim can modify a webpage to function as the user sees fit and this fork takes advantage of this on a variety of websites 
+
 
 # Where can I get cVim?
 
