@@ -1,12 +1,13 @@
-# What is cVim?
+# How does this differ from mainline [cvim?](https://github.com/1995eaton/chromium-vim?)
 
-Vim for Google Chrome. I hate using the mouse, especially after learning Vim. With my desktop (Linux), I have a lot of key bindings that make doing things easier: I open Chrome with `Alt+w`, I close a window with `Alt+Shift+d`, I open a terminal with `Alt+t`. This is harder to do with Chrome because it has no section for customizing keyboard shortcuts, and it is still necessary to use the mouse to do things like click links. cVim aims to eliminate this problem as best as the Chrome extensions API will allow it to.
+CVim is an essential part of my workflow as a programmer and I've made a number of 'comfort changes' that aren't suitable for merging upstream:
 
-# Where can I get cVim?
+- Consolidated script resources. CVim loades dozens of content scripts which crowd out actual content when debugging web applications.
 
- * There are two ways:
-  * You can install it through the [Chrome web store](https://chrome.google.com/webstore/detail/cvim/ihlenndgcmojhcghmfjfneahoeklbjjh)
-  * You can download the `.zip` file [here](https://github.com/1995eaton/chromium-vim/archive/master.zip) and enable cVim by going to the `chrome://extensions` URL and checking developer mode, then pointing Chrome to the unzipped folder via the `Load unpacked extensions...` button.
+- "Vendor source" & Disable updates. A malicious content script would be pretty nasty, even with a small set of extension permissions. I keep a "known good" version of cvim vendored and distribute that to new machines rather than installing through the Chrome Webstore.
+
+- Utility functions and "monkeygreasing". In addition to being a keyboard-oriented way to navigate the web, cvim can modify pages to function as the user sees fit and this fork takes advantage of this on a variety of websites 
+
 
 # Why is this different than Vimium, ViChrome, or Vrome?
 
@@ -498,17 +499,3 @@ let completionengines = ['google', 'google-image', 'youtube'] " Show only these 
    executed commands starting with a certain combination of letters (for example,
    entering `ta` in the command bar and pressing the up arrow will search command
    history for all matches beginning with `ta`
-
-# Contributing
-
-Nice that you want to spend some time improving this extension.
-Solving issues is always appreciated. If you're going to add a feature,
-it would be best to [submit an issue](https://github.com/1995eaton/chromium-vim/issues).
-You'll get feedback whether it will likely be merged.
-
-1. Run `npm install` in the repository's root folder
-1. Run `make`
-1. Navigate to `chrome://extensions`
-1. Toggle into Developer Mode
-1. Click on "Load Unpacked Extension..."
-1. Select the cVim directory.
