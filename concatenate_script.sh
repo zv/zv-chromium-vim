@@ -1,5 +1,5 @@
 declare -a files
-files=(cmdline_frame.js
+files=(
     content_scripts/cvimrc_parser.js
     content_scripts/session.js
     content_scripts/utils.js
